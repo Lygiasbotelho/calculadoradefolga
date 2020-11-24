@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de folgas</title>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./styles/escalaFolga.css">
+
+</head>
+
+<body>
+    <header> <img class="img-principal" src="./images/todefolgaoficial.jpg"></header>
+    <main>
+        <section>
+            <div class="container calculadora">
+                <h2 class="title">Calculadora de Folgas</h2>
+                <p class="detalhe center"> * Escala 1x1 (1 folga a cada dia trabalhado) </p>
+                <div class="form-group row justify-content-center">
+
+                    <div class="col-md-4 col-sm-3">
+                        <label class="col-form-label" for="dataInicial">Data da folga inicial: </label>
+                    </div>
+                    <div class="col-md-4 col-sm-9">
+                        <input onchange="atualizaData(this)" class="form-control" type="date" id="dataInicial">
+
+                    </div>
+                </div>
+
+                <div class="form-group row justify-content-center">
+
+                    <div class="col-md-4 col-sm-3 ">
+                        <label class="col-form-label" for="dataFinal">Calcular até a data:</label>
+                    </div>
+
+                    <div class="col-md-4 col-sm-9">
+                        <input onchange="atualizaData(this)" class="form-control" type="date" id="dataFinal">
+                       
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-sm-8">
+                        <button class="btn btn-primary float-right" onclick="calcularFolga()">Calcular Folga</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="row justify-content-center">
+
+                        <div class="col-md-4">
+                            <img class="img-folga" src="./images/day-off.gif">
+                        </div>
+                        <div class="col-md-4 col-sm-7">
+                            <ul class="uldata">
+                                <li class="li-title">Dias de Folga</li>
+                                <ul id="uldata"></ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div><a class="link" target= "_blanck" href="https://lygia.me"><p>Desenvolvido por Lygia Botelho</p></a></div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="./scripts/escalaFolga.js"></script>
+
+</body>
+
+</html>
